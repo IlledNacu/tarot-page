@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+/* font-family: 'Cinzel', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&display=swap');
+/* font-family: 'Cardo', serif;  <-- simple e itálica*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base y encabezado de todas las páginas*/
+
+body {
+    background-color: black;
+    color: white;
+    /* width: 100vw;
+    font-weight: 400; */
+
+    font-family: 'Cardo', serif;
+    font-style: normal;
+
+    font-display: swap;
+}
+
+p::selection, h2::selection, h3::selection, h4::selection, h5::selection, legend::selection, label::selection {
+    background-color: rgb(77, 17, 133);
+}
+
+header .title {
+    margin-right: 20px;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    color: blueviolet;
+}
+
+header .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0 10px 0;
+}
+
+.navbar-toggler {
+    border-color: white;
+    color: white;
+}
+
+.navbar {
+    padding: 15px;
+    background-color: blueviolet;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+}
+
+.nav-link {
+    color: white;
+    border-style: ridge;
+    border-color: transparent;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: rgb(77, 17, 133);
+    border-color: white;
+    border-style: dashed;
+}
+
+/* COVER DE LA PÁGINA PRINCIPAL*/
+/* Estilos para la portada */
+.index {
+    background-image: url(/assets/tarot-card-7c5dj9kqjnwd4cwr.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.index .container {
+    background-color: hsla(0, 0%, 0%, 50%);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 2em;
+}
+
+.index .lead {
+    font-size: 50px;
+    text-shadow: 2px 2px 2px rgb(77, 17, 133);
+    margin: 0 10%;
+}
+
+.index .sub-lead {
+    font-size: 40px;
+    margin-top: 2%;
+}
+
+.index .keypad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px
+}
+
+.index .keypad a {
+    padding: 15px;
+    margin: 5px;
+    border-radius: 70px;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+    -ms-border-radius: 70px;
+    -o-border-radius: 70px;
+    background-color: transparent;
+    border-color: white;
+    border-style: dashed;
+    font-family: 'Cardo', serif;
+    font-size: 20px;
+    color: white;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.index .keypad a:hover {
+    background-color: hsla(271, 76%, 53%, 50%);
+    border-color: blueviolet;
+    border-style: ridge;
+}
+
+.index .keypad a img {
+    width: 20px;
+    height: 20px;
+    border: none;
+    filter: invert();
+    -webkit-filter: invert();
+}
+
+/* GALERÍA DE CARTAS DE LA PÁGINA PRINCIPAL */
+
+#library .img-fluid {
+    height: 50vh;
+    filter: invert();
+    -webkit-filter: invert();
+}
+
+#library {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+}
+
+
+#library .top {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+/* Estilo del grid de imágenes */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columnas en pantalla grande */
+    grid-gap: 20px;
+    /* Espacio entre las imágenes */
+    padding: 2em;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card {
+    transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    position: fixed;
+    background-color: white;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    visibility: hidden;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card:hover .back{
+    visibility: visible;
+}
+
+/* Footer de todas las páginas */
+
+footer a:hover img{
+    filter: invert();
+    -webkit-filter: invert();
+}
+
+.cr {
+    text-align: center;
+    margin: 20px;
+}
+
+/* PÁGINA DE HISTORIA */
+
+.history,
+.reading {
+    font-family: 'Cardo', serif;
+    font-size: 20px;
+}
+
+/* PÁGINA DE LECTURA */
+
+.reading .decoration img {
+    border: solid 2px blueviolet;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    overflow: hidden;
+}
+
+.reading input:hover, .reading textarea:hover, .reading button:hover {
+    background-color: blueviolet;
+    border: 1px solid rgb(77, 17, 133);
+    color: white;
+}
+
+
+.reading input:focus, .reading textarea:focus, .reading button:focus {
+    background-color: rgb(151, 70, 226);
+    border: 1px solid rgb(77, 17, 133);
+    color: white;
+}
+
+.reading button {
+    border: 1px solid rgb(77, 17, 133);
+    background-color: rgb(77, 17, 133);
+    color: white;
+}
+
+/* CARTA RANDOM */
+.invisible {
+    display: none;
+}
+
+.random-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.random-card-presentation {
+    margin-bottom: 20px;
+}
+
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    .navbar-collapse .nav {
+        flex-direction: column;
+        /* Mostrar el menú de forma vertical en dispositivos móviles */
+    }
+
+    .navbar-collapse .nav-item {
+        width: 100%;
+        /* Hacer que los elementos ocupen todo el ancho en dispositivos móviles */
+    }
+
+    .lead {
+        font-size: 35px;
+        margin: 0;
+    }
+
+    .sub-lead {
+        font-size: 25px;
+        margin-top: 3%;
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reading .decoration{
+        display: none;
+    }
+}
