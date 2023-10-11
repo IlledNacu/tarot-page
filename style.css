@@ -102,7 +102,7 @@ header .navbar-brand {
     margin: 30px
 }
 
-.index .keypad a {
+.index .keypad a, #mostrarCarta {
     padding: 15px;
     margin: 5px;
     border-radius: 70px;
@@ -123,7 +123,7 @@ header .navbar-brand {
     cursor: pointer;
 }
 
-.index .keypad a:hover {
+.index .keypad a:hover, #mostrarCarta:hover {
     background-color: hsla(271, 76%, 53%, 50%);
     border-color: blueviolet;
     border-style: ridge;
@@ -272,7 +272,7 @@ footer a:hover img{
 }
 
 /* CARTA RANDOM */
-.invisible {
+.hide {
     display: none;
 }
 
@@ -288,7 +288,22 @@ footer a:hover img{
     margin-bottom: 20px;
 }
 
+.carta{
+    width: 25%;
+}
 
+.back img{
+    width: 50%;
+}
+
+.back .separador{
+    margin-top: 30%;
+}
+
+#mostrarCarta{
+    width: 200px;
+    align-self: center;
+}
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 767px) {
@@ -318,5 +333,24 @@ footer a:hover img{
 
     .reading .decoration{
         display: none;
+    }
+
+    .carta{
+        width: 70%;
+    }
+
+    .image-grid .back p{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 667px) {
+    .image-grid .back .mb-3, .image-grid .back .poem, .image-grid .back img{
+        display: none;
+    }
+
+    .image-grid .back p{
+        font-size: 12px;
     }
 }

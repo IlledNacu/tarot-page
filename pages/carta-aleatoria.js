@@ -11,7 +11,7 @@
 // });
 
 
-const cartasInvisibles = document.querySelectorAll('.carta.invisible');
+const cartasInvisibles = document.querySelectorAll('.carta.hide');
 let cartaSeleccionada = null; // Almacenar la última carta seleccionada
 
 document.getElementById('mostrarCarta').addEventListener('click', function () {
