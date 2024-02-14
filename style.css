@@ -65,6 +65,30 @@ header .navbar-brand {
     border-style: dashed;
 }
 
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+}
+
+.whatsapp-float svg {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.whatsapp-float:hover{
+    color: blueviolet;
+}
+
 /* COVER DE LA PÁGINA PRINCIPAL*/
 /* Estilos para la portada */
 .index {
